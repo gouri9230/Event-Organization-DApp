@@ -31,8 +31,8 @@ contract EventOrganizer {
         require(_quantity > 0, "you need to buy atleast 1 ticket");
         require(msg.value >= (events[_eventId].price * _quantity), "pay full amount for the number of tickets you want to buy");
         require(events[_eventId].date > block.timestamp, "event has already passed.");
-        require(events[_eventId].totalTickets >= _quantity, "not enough tickets left");
-        tickets[msg.sender][_eventId] = _quantity;
+        require(events[_eventId].ticketsRemaining >= _quantity, "not enough tickets left");
+        tickets[msg.sender][_eventId] += _quantity;
         events[_eventId].ticketsRemaining -= _quantity;
     }
 }
