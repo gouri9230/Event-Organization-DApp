@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+/* Event Table Styles */
+.event-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.event-table th {
+  background-color: #00bcd4; /* cyan-ish header */
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid white;
+}
+
+.event-table td {
+  background-color: #96d4d4;
+  border: 1px solid white;
+  padding: 7px;
+}
+
+.event-table tr:nth-child(even) td {
+  background-color: #bfecec; /* subtle alternate row color */
+}
+
