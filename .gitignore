@@ -2,6 +2,7 @@
 /node_modules
 .vscode
 .env
+/client/build
 
 # Compilation output
 /dist
