@@ -4,6 +4,7 @@ import abi from "./contracts/EventOrganizer.json";
 import Buy from "./components/buyTickets";
 import CreateEvent from './components/createEvent';
 import EventLists from "./components/EventDetails";
+import Tickets from './components/GetTickets';
 import './App.css';
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
         <>
         <div className="container"><CreateEvent state = {state}/></div>
         <div className="container"><EventLists state={state}/></div>
+        <div className='container'><Tickets state= {state}/></div>
         </>) : ( <>
     <div className="container"><EventLists state={state}/></div>
     <div className="container"><Buy state = {state}/></div>
